@@ -1,0 +1,28 @@
+[package]
+name = "analyze-npm"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+swc_core = { version = "0.105.0", features = [
+  "common",
+  "common_ahash",
+  "common_sourcemap",
+  "ecma_ast",
+  "ecma_codegen",
+  "ecma_parser",
+  "ecma_preset_env",
+  "ecma_transforms",
+  "ecma_transforms_compat",
+  "ecma_transforms_optimization",
+  "ecma_transforms_proposal",
+  "ecma_transforms_react",
+  "ecma_transforms_typescript",
+  "ecma_visit",
+  "ecma_utils",
+] }
+parcel-resolver = { git = "https://github.com/parcel-bundler/parcel.git" }
+serde = "*"
+serde_json = "*"
+rayon = "*"
+dashmap = "*"
